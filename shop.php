@@ -1,5 +1,5 @@
 <?php
-
+include ('header.php');
 include ('dbHandler.php');
 include ('navbar.php');
 session_start();
@@ -24,11 +24,30 @@ $stmt = $conn->query("SELECT * FROM product_database");
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['price']; ?></td>
             <td><?php echo '<img src="images/'  . $row["image"] .  '">';?></td>
-            <td><button type="button" id="cart_button">Add to cart</button></td>
+            <td><button type="button" id="cart_button" productId = <?php echo $row['id']; ?>>Add to cart</button></td>
 
         </tr>
         <?php
     }
     ?>
 </table>
+
+<script>
+
+    $(document).ready(function() {
+
+        alert("hello");
+
+        jQuery("#cart_button").click(function(){
+
+            alert ($(this).productID);
+
+        });
+
+    });
+
+
+
+</script>
+
 
