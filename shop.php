@@ -1,6 +1,7 @@
 <?php
 
 include ('dbHandler.php');
+include ('navbar.php');
 session_start();
 
 echo ("Welcome to the shop user " . $_SESSION['userID'] );
@@ -23,6 +24,8 @@ $stmt = $conn->query("SELECT * FROM product_database");
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['price']; ?></td>
             <td><?php echo '<img src="images/'  . $row["image"] .  '">';?></td>
+            <td><button type="button" id="cart_button">Add to cart</button></td>
+
         </tr>
         <?php
     }
