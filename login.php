@@ -1,14 +1,14 @@
 
 
 <?php include 'header.php' ?>
-<?php include 'FunctionsHandler.php' ?>
+<?php //include 'FunctionsHandler.php' ?>
 
 
 
 
 <body>
 
-<form action="login.php" method="post" id="loginForm">
+<form action="functions.php" method="post" id="loginForm">
 Name <br/>
     <input type="text" id="userName" name="userName"/>
     <br/> Password <br/>
@@ -26,7 +26,7 @@ Name <br/>
 
 </body>
 </html>
-<script>
+<!--<script>
 
     $(document).ready(function() {
 
@@ -35,7 +35,7 @@ Name <br/>
         jQuery("#submitButton").click(function(){
 
             <?php
-            if(isset($_POST['submit'])) {
+/*            if(isset($_POST['submit'])) {
 
                 $name = $_POST['userName'];
                 $pass = $_POST['userPassword'];
@@ -45,7 +45,7 @@ Name <br/>
                 $functionsHandler->loginFunction($name, $pass, $conn);
             }
 
-            ?>
+            */?>
 
         });
 
@@ -54,7 +54,7 @@ Name <br/>
 
 
 </script>
-
+-->
 
 
 
