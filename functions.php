@@ -6,10 +6,8 @@ include('LoginHandler.php');
 $name = $_POST['userName'];
 $pass = $_POST['userPassword'];
 
-echo $name;
 
+$loginHandler = new LoginHandler();
+$loginHandler->userCheck($name, $pass, $conn);
 
-/*$loginHandler = new LoginHandler();
-$reply = $loginHandler->echoUser($name, $pass);
-
-echo $reply;*/
+//echo $reply;

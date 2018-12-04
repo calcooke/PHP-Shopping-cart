@@ -1,7 +1,7 @@
 
-<?php include 'LoginHandler.php' ?>
-<?php include 'header.php' ?>
 
+<?php include 'header.php' ?>
+<?php include 'LoginHandler.php' ?>
 
 
 <body>
