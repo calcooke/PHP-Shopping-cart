@@ -14,9 +14,10 @@ class LoginHandler{
 
         if($name == $userRow['username'] && $pass == $userRow['password']) {
 
-            var_dump($userRow);
-            $SESSION['userID'] = $userRow['id'];
-            echo "USERS ID IS" . $SESSION['userID'];
+            //var_dump($userRow);
+            $_SESSION['userID'] = $userRow['id'];
+            //header('Location: shop.php');
+            echo "USERS ID IS" . $_SESSION['userID'];
 
         } else {
 

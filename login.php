@@ -7,15 +7,16 @@
 
 <body>
 
-<form action="functions.php" method="post" id="loginForm">
+<form action="" method="post" id="loginForm">
 Name <br/>
     <input type="text" id="userName" name="userName"/>
     <br/> Password <br/>
     <input type="password" id="userPassword" name="userPassword"/>
     <br/>
-    <input id="submitButton" name="submitButton" type="submit"/>
+
 
 </form>
+<input id="submitButton" name="submitButton" type="submit"/>
 
 <br/>
 <br/>
@@ -23,6 +24,24 @@ Name <br/>
 <h2> Username: aaaa, password: bbbb </h2>
 
 </body>
+</html>
+<script>
+
+    $(document).ready(function() {
+
+        alert("hello");
+
+        jQuery("#submitButton").click(function(){
+
+            alert("hello");
+
+        });
+
+    });
+
+    j
+
+</script>
 
 
 

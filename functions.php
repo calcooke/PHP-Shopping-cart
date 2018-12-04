@@ -10,4 +10,5 @@ $pass = $_POST['userPassword'];
 
 $loginHandler = new LoginHandler();
 $loginHandler->userCheck($name, $pass, $conn);
+header('Location: shop.php');
 
