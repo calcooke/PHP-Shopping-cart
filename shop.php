@@ -13,7 +13,7 @@ $stmt = $conn->query("SELECT * FROM product_database");
 
     <tr>
         <th>Title</th>
-        <th>Edit</th>
+        <th>Price</th>
         <th>Delete</th>
     </tr>
     <?php
@@ -22,7 +22,7 @@ $stmt = $conn->query("SELECT * FROM product_database");
         <tr>
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['price']; ?></td>
-            <td><?php echo '<img src=" '.$row["image"] .  '">'; ?></td>
+            <td><?php echo '<img src="images/'  . $row["image"] .  '">';?></td>
         </tr>
         <?php
     }
