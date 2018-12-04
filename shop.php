@@ -22,7 +22,7 @@ $stmt = $conn->query("SELECT * FROM product_database");
         <tr>
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['price']; ?></td>
-            <td><img src="<?php echo $row['image']; ?>"</td>
+            <td><?php echo '<img src=" '.$row["image"] .  '">'; ?></td>
         </tr>
         <?php
     }
