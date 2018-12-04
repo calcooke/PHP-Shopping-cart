@@ -8,6 +8,14 @@ echo ("Welcome to the shop user " . $_SESSION['userID'] );
 
 $stmt = $conn->query("SELECT * FROM product_database");
 
+if(!isset($_COOKIE["user"])) {
+    setcookie("user", time(), time() + (86400 * 30), "/"); // 86400 = 1 day
+    //$_COOKIE['user_cart'] = array();
+
+}
+
+$_SESSION["user_cart"] = array();
+
 ?>
 
 <table style="border: 1px solid black">
@@ -31,27 +39,39 @@ $stmt = $conn->query("SELECT * FROM product_database");
     }
     ?>
 </table>
-<h1 id="clickedval">hmmmm</h1>
+
 <script>
 
     $(document).ready(function() {
 
-        alert("hello");
-
         jQuery("button").click(function(){
 
-            alert("hello");
-            //var theID = $('#cart_button').parent().attr("id");
-            //var theID = $('#cart_button').closest("tr").attr("id");
             var theID = $(this).closest("tr").attr("id");
-            //alert ($("#clickedval").innerText);
-            alert(theID);
 
+            jQuery.ajax({
+
+                type:"post",
+                dataType:"Text",
+                url:"ajax.php",
+                data:{"productID":theID},
+                beforeSend: function(){
+
+                    alert("sending");
+                    alert(theID);
+
+                },
+
+                success: function(data){
+
+                    alert("Added to cart!");
+
+                }
+
+            });
 
         });
 
     });
-
 
 
 </script>
