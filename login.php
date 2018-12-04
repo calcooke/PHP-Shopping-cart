@@ -3,9 +3,10 @@
 <?php include 'header.php' ?>
 
 
+
 <body>
 
-<form action="functions.php" method="post" id="cvForm">
+<form action="functions.php" method="post" id="loginForm">
 Name <br/>
     <input type="text" id="userName" name="userName"/>
     <br/> Password <br/>

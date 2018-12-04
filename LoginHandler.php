@@ -2,18 +2,19 @@
 
 class LoginHandler{
 
-    function echoUser($name, $pass) {
+    /*function echoUser($name, $pass) {
 
         echo $name . " " . $pass;
 
-    }
+    }*/
 
-    /*function userCheck($name, $pass) {
+    function userCheck($name, $pass) {
 
         $stmt = $conn->prepare('SELECT * FROM users WHERE username=:username AND password=:password');
         $stmt->execute(['username'=> $name, 'password'=> $pass]);
 
-        $user = $stmt->fetch();
+        //$user = $stmt->fetch();
+        $row = $stmt->fetch();
 
         if ($name == "aaaa" && $pass == "bbbb") {
 
@@ -25,7 +26,7 @@ class LoginHandler{
         }
 
 
-    }*/
+    }
 
 
 
