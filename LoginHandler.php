@@ -15,6 +15,8 @@ class LoginHandler{
         if($name == $userRow['username'] && $pass == $userRow['password']) {
 
             var_dump($userRow);
+            $SESSION['userID'] = $userRow['id'];
+            echo "USERS ID IS" . $SESSION['userID'];
 
         } else {
 

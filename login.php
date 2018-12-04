@@ -4,6 +4,7 @@
 
 
 
+
 <body>
 
 <form action="functions.php" method="post" id="loginForm">
@@ -16,7 +17,13 @@ Name <br/>
 
 </form>
 
+<br/>
+<br/>
+
+<h2> Username: aaaa, password: bbbb </h2>
+
 </body>
+
 
 
 
