@@ -16,8 +16,8 @@ class LoginHandler{
 
             //var_dump($userRow);
             $_SESSION['userID'] = $userRow['id'];
-            //header('Location: shop.php');
-            echo "USERS ID IS" . $_SESSION['userID'];
+            header('Location: shop.php');
+            //echo "USERS ID IS" . $_SESSION['userID'];
 
         } else {
 
