@@ -19,7 +19,6 @@ class FunctionsHandler{
 
         if($name == $userRow['username'] && $pass == $userRow['password']) {
 
-
             $_SESSION['userID'] = $userRow['id'];
             header('Location: shop.php');
             //echo "USERS ID IS" . $_SESSION['userID'];

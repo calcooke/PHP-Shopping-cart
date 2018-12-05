@@ -1,9 +1,6 @@
 <?php
 
-
-
 class LoginHandler{
-
 
     function userCheck($name, $pass, $conn) {
 
@@ -26,7 +23,5 @@ class LoginHandler{
         }
 
     }
-
-
 
 }

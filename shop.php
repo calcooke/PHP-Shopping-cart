@@ -8,13 +8,13 @@ echo ("Welcome to the shop user " . $_SESSION['userID'] );
 
 $stmt = $conn->query("SELECT * FROM product_database");
 
-if(!isset($_COOKIE["user"])) {
-    setcookie("user", time(), time() + (86400 * 30), "/"); // 86400 = 1 day
-    //$_COOKIE['user_cart'] = array();
+if(!isset($_COOKIE["user_cart"])) {
+    setcookie("user_cart", time(), time() + (86400 * 30), "/"); // 86400 = 1 day
+    $_COOKIE['user_cart'] = array();
 
 }
 
-$_SESSION["user_cart"] = array();
+//$_SESSION["user_cart"] = array();
 
 ?>
 
@@ -56,8 +56,8 @@ $_SESSION["user_cart"] = array();
                 data:{"productID":theID},
                 beforeSend: function(){
 
-                    alert("sending");
-                    alert(theID);
+                    /*alert("sending");
+                    alert(theID);*/
 
                 },
 
