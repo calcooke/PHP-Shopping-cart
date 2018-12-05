@@ -8,7 +8,9 @@ session_start();
 $stmt = $conn->query("SELECT * FROM product_database");
 
 
-$row = ($_SESSION["user_cart"]);
+$userItems = ($_SESSION["user_cart"]);
+
+var_dump($userItems);
 
 ?>
 
@@ -21,26 +23,32 @@ $row = ($_SESSION["user_cart"]);
     </tr>
     <?php
     while ($row = $stmt->fetch()) {
-        ?>
-        <tr id = <?php echo $row['id']; ?>>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['price']; ?></td>
-            <td><?php echo '<img src="images/'  . $row["image"] .  '">';?></td>
-            <td><button type="button" id="cart_button">Add to cart</button></td>
+        foreach ($userItems as $items) {
+            if ($row["id"] == $items) {
+                ?>
+                <tr id= <?php echo $row['id']; ?>>
+                    <td><?php echo $row['title']; ?></td>
+                    <td><?php echo $row['price']; ?></td>
+                    <td><?php echo '<img src="images/' . $row["image"] . '">'; ?></td>
+                    <td>
+                        <button type="button" id="cart_button">Remove</button>
+                    </td>
 
-        </tr>
-        <?php
+                </tr>
+                <?php
+            }
+        }
     }
-    ?>
+        ?>
 </table>
 
 <?php
 
-function pr($user)
+function pr($userItems)
 {
     echo "<pre>";
-    print_r($user);
+    print_r($userItems);
     echo "</pre>";
 }
 
-pr($user);
+//pr($user);

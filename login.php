@@ -1,9 +1,12 @@
 
 
 <?php include ('header.php') ?>
-<?php //include 'FunctionsHandler.php' ?>
+<?php //include 'FunctionsHandler.php'
 
 
+
+
+?>
 
 
 <body>

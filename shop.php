@@ -4,7 +4,7 @@ include ('dbHandler.php');
 include ('navbar.php');
 session_start();
 
-echo ("Welcome to the shop user " . $_SESSION['userID'] );
+
 
 $stmt = $conn->query("SELECT * FROM product_database");
 
@@ -15,6 +15,10 @@ if(!isset($_COOKIE["user_cart"])) {
 }
 
 //$_SESSION["user_cart"] = array();
+/*$getName = $conn->query("SELECT username FROM users WHERE id = ");
+$name = $getName->fetch();
+echo ("Welcome to the shop user " . $_SESSION['userID'] );*/
+
 
 ?>
 
