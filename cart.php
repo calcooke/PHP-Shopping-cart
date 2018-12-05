@@ -4,13 +4,23 @@ include ('header.php');
 include ('dbHandler.php');
 include ('navbar.php');
 session_start();
+echo  $_COOKIE['user_cart'];
 
 $stmt = $conn->query("SELECT * FROM product_database");
 
 
-$userItems = ($_SESSION["user_cart"]);
+$userItems = $_COOKIE["user_cart"];
 
-var_dump($userItems);
+function pr($userItems)
+{
+    foreach ($userItems as $items) {
+}
+    echo "<pre>";
+    print_r($items);
+    echo "</pre>";
+}
+
+
 
 ?>
 
@@ -44,11 +54,13 @@ var_dump($userItems);
 
 <?php
 
-function pr($userItems)
+
+
+/*function pr($userItems)
 {
     echo "<pre>";
     print_r($userItems);
     echo "</pre>";
-}
+}*/
 
-//pr($user);
+pr($userItems);

@@ -3,7 +3,8 @@
 <?php include ('header.php') ?>
 <?php //include 'FunctionsHandler.php'
 
-
+/*session_start();
+echo session_destroy();*/
 
 
 ?>

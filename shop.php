@@ -13,11 +13,12 @@ if(!isset($_COOKIE["user_cart"])) {
     $_COOKIE['user_cart'] = array();
 
 }
+echo "Welcome to the shop user " . $_SESSION['userID'];
 
 //$_SESSION["user_cart"] = array();
 /*$getName = $conn->query("SELECT username FROM users WHERE id = ");
 $name = $getName->fetch();
-echo ("Welcome to the shop user " . $_SESSION['userID'] );*/
+echo "Welcome to the shop user " . $_SESSION['userID'] );*/
 
 
 ?>
@@ -79,5 +80,14 @@ echo ("Welcome to the shop user " . $_SESSION['userID'] );*/
 
 
 </script>
+
+<?php
+
+function pr($userItems)
+{
+    echo "<pre>";
+    print_r($userItems);
+    echo "</pre>";
+}
 
 
